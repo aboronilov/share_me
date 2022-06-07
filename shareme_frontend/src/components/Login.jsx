@@ -14,7 +14,6 @@ export default function Login() {
    const handleCallbackResponse = (response) => {      
       const userObj = jwt_decode(response.credential);
       localStorage.setItem('user', JSON.stringify(userObj));
-      console.log(userObj)
       const { given_name, aud, picture } = userObj;
 
       const doc = {
